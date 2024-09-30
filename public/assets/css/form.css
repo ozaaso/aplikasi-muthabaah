@@ -1,0 +1,145 @@
+/* Gaya Umum */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gaya Khusus untuk Halaman Form */
+.container-form {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+
+
+}
+
+.container-form h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.label-form {
+    font-size: 10px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-form1 {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+    transition: border-bottom 0.3s;
+}
+
+/* Focus state for the input elements with class "input-form1" */
+.input-form1:focus {
+    border-bottom: 2px solid #007bff;
+    outline: none;
+}
+
+.checkbox-grid {
+    font-size: 13px;
+    accent-color: #FFA500;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Optional: adds space between the columns */
+}
+
+.checkbox-grid div {
+    width: 48%; /* Each column will take up roughly half of the available space */
+}
+
+.checkbox-grid label {
+    display: block; /* Ensures each checkbox label appears on its own line */
+    margin-bottom: 10px; /* Optional: adds space between checkboxes */
+}
+
+/* Gaya untuk checkbox di halaman form */
+.checkbox-form {
+    margin-right: 10px;
+    accent-color: #FFE7C6;
+}
+
+/* Gaya untuk tombol */
+.tombol1 {
+    background-color: #FFC488;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the .tombol1 class */
+.tombol1:hover {
+    background-color: #e67300;
+}
+
+/* Gaya untuk tombol cancel */
+.cancel-button {
+    background-color: #f4f4f4;
+    color: #555;
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the cancel button */
+.cancel-button:hover {
+    background-color: #e0e0e0;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #007BFF; /* Warna biru */
+    border-radius: 8px; /* Sudut membulat */
+    width: 100%; /* Lebar penuh */
+    box-sizing: border-box; /* Agar padding tidak menambah lebar */
+    transition: border-color 0.3s ease; /* Efek transisi */
+}
+
+input[type="date"]:focus {
+    border-color: #0056b3; /* Warna biru gelap saat fokus */
+    outline: none; /* Menghilangkan outline default */
+}
+
+#tanggal-terformat {
+    margin-top: 10px;
+    font-size: 18px; /* Ukuran font lebih besar */
+    color: #333; /* Warna teks */
+}
+

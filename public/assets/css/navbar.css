@@ -1,0 +1,93 @@
+/* General Styles for Navbar */
+.navbar1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.navbar-left h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+    margin-left: 50px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+/* Search box */
+.search-box1 input {
+    padding: 10px;
+    width: 75%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-left: 80px;
+    box-sizing: border-box;
+}
+
+/* Add cari button */
+.cari-btn1 {
+    margin-left: 40px;
+    background-color: #FFC488;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust the layout for smaller screens */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-right {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .search-box input {
+        width: calc(100% - 70px); /* Adjust search box to take most of the width */
+    }
+
+    .add-btn {
+        padding: 10px;
+        width: 60px; /* Button becomes smaller on mobile */
+        font-size: 12px;
+        margin-left: 10px;
+    }
+}
+
+/* For even smaller screens like phones */
+@media (max-width: 480px) {
+    .navbar-left h3 {
+        font-size: 18px;
+    }
+
+    .search-box input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .add-btn {
+        width: 100%;
+    }
+}

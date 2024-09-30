@@ -1,0 +1,158 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+
+
+
+.card img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+/* Hide the original checkbox */
+.checklist input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none; /* For Safari */
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    background-color: #eee;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Custom checkbox style when checked */
+.checklist input[type="checkbox"]:checked {
+    background-color: orange; /* Change background to orange */
+    border-color: orange;
+}
+
+/* Add a checkmark symbol when checked */
+.checklist input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    left: 3px;
+    top: -1px;
+}
+
+/* Label styling */
+.checklist label {
+    font-size: 16px;
+    color: #333;
+}
+
+/* When checked, change text color to orange and add strikethrough */
+.checklist input[type="checkbox"]:checked + label {
+    color: rgb(233, 100, 5);
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+.card {
+    background-color: white;
+    width: 400px; /* Adjusted to fit two columns */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.checklist {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Creates two columns */
+}
+
+.checklist li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 48%; /* Each item takes about half the width to form two columns */
+}
+
+/* .checklist input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+.checklist label {
+    font-size: 16px;
+    color: #333;
+}
+
+.checklist input[type="checkbox"]:checked + label {
+    color: orange;
+    text-decoration: line-through;
+} */
+
+
+
+
+  /* Profile section styling */
+   /* Profile section styling */
+/* Profile section styling */
+.profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.profile-info .name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.profile-info .origin {
+    font-size: 14px;
+    color: #666;
+}
+
+.profile-info .date {
+    font-size: 12px;
+    color: #999;
+}
+
+

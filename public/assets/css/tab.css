@@ -1,0 +1,29 @@
+ /* Tab Bar Styles */
+ .tab-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+    height: 50px; /* Larger height */
+}
+.tab {
+    text-align: center;
+    cursor: pointer;
+    flex: 1;
+}
+.tab span {
+    display: block;
+    font-size: 18px; /* Bigger font */
+    color: #333;
+}
+.tab.active span {
+    color: #FFC488;
+    font-weight: bold;
+}
