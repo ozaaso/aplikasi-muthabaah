@@ -23,34 +23,23 @@
 <div class="container">
     <!-- <h1>Muthoba'ah Harian</h1> -->
 
-    <div class="date">Monday, November 27, 2023</div>
+    <div class="date">Monday, November 27, 2023  </div>
     <div class="cards">
+        @foreach ($jurnals  as $jurnal)
         <div class="card">
             <div class="card-header">
                 <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
             </div>
            <a href="harian" style="text-decoration: none;"> <div class="card-content">
-                <p class="name">Bunaiyyah</p>
-                <p class="location">Pinrang Sulsel</p>
+                 <p class="name">{{ $jurnal->nama }}</p>
+                <p class="location">{{ $jurnal->asal }}</p>
             </div></a>
             <div class="context-menu">
                 <a href="edit">Edit</a>
                 <a href="delete">Delete</a>
             </div>
         </div>
-        <div class="card">
-            <div class="card-header">
-                <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
-            </div>
-           <a href="harian" style="text-decoration: none;"> <div class="card-content">
-                <p class="name">Bunaiyyah</p>
-                <p class="location">Pinrang Sulsel</p>
-            </div></a>
-            <div class="context-menu">
-                <a href="edit">Edit</a>
-                <a href="delete">Delete</a>
-            </div>
-        </div>
+        @endforeach
     </div>
 
     <div class="date">Sunday, November 26, 2023</div>
@@ -81,136 +70,7 @@
                 <a href="delete">Delete</a>
             </div>
         </div>
-        <div class="card">
-            <div class="card-header">
-                <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
-            </div>
-           <a href="harian" style="text-decoration: none;"> <div class="card-content">
-                <p class="name">Bunaiyyah</p>
-                <p class="location">Pinrang Sulsel</p>
-            </div></a>
-            <div class="context-menu">
-                <a href="edit">Edit</a>
-                <a href="delete">Delete</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
-            </div>
-           <a href="harian" style="text-decoration: none;"> <div class="card-content">
-                <p class="name">Bunaiyyah</p>
-                <p class="location">Pinrang Sulsel</p>
-            </div></a>
-            <div class="context-menu">
-                <a href="edit">Edit</a>
-                <a href="delete">Delete</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
-            </div>
-           <a href="harian" style="text-decoration: none;"> <div class="card-content">
-                <p class="name">Bunaiyyah</p>
-                <p class="location">Pinrang Sulsel</p>
-            </div></a>
-            <div class="context-menu">
-                <a href="edit">Edit</a>
-                <a href="delete">Delete</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
-            </div>
-           <a href="harian" style="text-decoration: none;"> <div class="card-content">
-                <p class="name">Bunaiyyah</p>
-                <p class="location">Pinrang Sulsel</p>
-            </div></a>
-            <div class="context-menu">
-                <a href="edit">Edit</a>
-                <a href="delete">Delete</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
-            </div>
-           <a href="harian" style="text-decoration: none;"> <div class="card-content">
-                <p class="name">Bunaiyyah</p>
-                <p class="location">Pinrang Sulsel</p>
-            </div></a>
-            <div class="context-menu">
-                <a href="edit">Edit</a>
-                <a href="delete">Delete</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
-            </div>
-           <a href="harian" style="text-decoration: none;"> <div class="card-content">
-                <p class="name">Bunaiyyah</p>
-                <p class="location">Pinrang Sulsel</p>
-            </div></a>
-            <div class="context-menu">
-                <a href="edit">Edit</a>
-                <a href="delete">Delete</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
-            </div>
-           <a href="harian" style="text-decoration: none;"> <div class="card-content">
-                <p class="name">Bunaiyyah</p>
-                <p class="location">Pinrang Sulsel</p>
-            </div></a>
-            <div class="context-menu">
-                <a href="edit">Edit</a>
-                <a href="delete">Delete</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
-            </div>
-           <a href="harian" style="text-decoration: none;"> <div class="card-content">
-                <p class="name">Bunaiyyah</p>
-                <p class="location">Pinrang Sulsel</p>
-            </div></a>
-            <div class="context-menu">
-                <a href="edit">Edit</a>
-                <a href="delete">Delete</a>
-            </div>
-        </div>
-                <div class="card">
-            <div class="card-header">
-                <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
-            </div>
-           <a href="harian" style="text-decoration: none;"> <div class="card-content">
-                <p class="name">Bunaiyyah</p>
-                <p class="location">Pinrang Sulsel</p>
-            </div></a>
-            <div class="context-menu">
-                <a href="edit">Edit</a>
-                <a href="delete">Delete</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
-            </div>
-           <a href="harian" style="text-decoration: none;"> <div class="card-content">
-                <p class="name">Bunaiyyah</p>
-                <p class="location">Pinrang Sulsel</p>
-            </div></a>
-            <div class="context-menu">
-                <a href="edit">Edit</a>
-                <a href="delete">Delete</a>
-            </div>
-        </div>
+
     </div>
     <br>
                 <!-- Pagination -->

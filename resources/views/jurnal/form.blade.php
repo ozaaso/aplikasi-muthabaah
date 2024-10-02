@@ -18,6 +18,7 @@
 @section('js')
 <script src="{{ asset('assets/js/tab.js') }}"></script>
 <script src="{{ asset('assets/js/scripts.js') }}"></script>
+<script src="{{ asset('assets/js/form.js') }}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
@@ -32,9 +33,10 @@
 
 <div class="container">
     <div class="list-container">
-    <form>
+        <form action="{{url('konten')}}" method="POST">
+            @csrf
     <label for="name">Nama <span style="color: red;"></span></label>
-    <input type="text" id="name" name="name" class="input-form1" required>
+    <input type="text" id="name" name="nama" class="input-form1" required>
 
     <label for="asal">Asal <span style="color: red;"></span></label>
     <input type="text" id="asal" name="asal" class="input-form1" required>
@@ -44,40 +46,31 @@
     <input type="date" class="form-control" id="tanggal" name="tanggal" required>
 <br>
 
-    <div class="checkbox-grid">
-        <div >
-            <label><input type="checkbox" name="ibadah[]" value="Subuh on time"> Subuh on time</label>
+<div class="checkbox-grid">
+    <div>
 
-            <label><input type="checkbox" name="ibadah[]" value="Zuhur on time"> Zuhur on time</label>
-
-            <label><input type="checkbox" name="ibadah[]" value="Asar on time"> Asar on time</label>
-            <label><input type="checkbox" name="ibadah[]" value="Magrib on time"> Magrib on time</label>
-            <label><input type="checkbox" name="ibadah[]" value="Isya on time"> Isya on time</label>
-            <label><input type="checkbox" name="ibadah[]" value="Tahajud"> Tahajud</label>
-
-
-
-            <label><input type="checkbox" name="ibadah[]" value="Sholat Fajr"> Qobliyah Subuh</label>
-               <label><input type="checkbox" name="ibadah[]" value="Dhuha"> Dhuha</label>
-            <label><input type="checkbox" name="ibadah[]" value="Qobliyah"> Qobliyah zuhur</label>
-            <label><input type="checkbox" name="ibadah[]" value="Ba'diyah zuhur"> Ba'diyah zuhur</label>
-
-
-
-
-        </div>
-        <div>
-        <label><input type="checkbox" name="ibadah[]" value="Sedekah Subuh"> Sedekah Subuh</label>
-        <label><input type="checkbox" name="ibadah[]" value="Tilawah pagi"> Tilawah pagi</label>
-            <label><input type="checkbox" name="ibadah[]" value="Zikir pagi"> Zikir pagi</label>
-            <label><input type="checkbox" name="ibadah[]" value="Tilawah malam"> Tilawah malam</label>
-            <label><input type="checkbox" name="ibadah[]" value="Baca Al Waqi'ah"> Baca Al Waqi'ah</label>
-            <label><input type="checkbox" name="ibadah[]" value="Baca Al Mulk"> Baca Al Mulk</label>
-            <label><input type="checkbox" name="ibadah[]" value="Berhalangan"> Berhalangan</label>
-            <label><input type="checkbox" name="ibadah[]" value="Mendoakan orang lain"> Mendoakan orang lain</label>
-
-        </div>
+        <label><input type="checkbox" name="subuh" value="1"> Subuh on time</label>
+        <label><input type="checkbox" name="zuhur" value="1"> Zuhur on time</label>
+        <label><input type="checkbox" name="asar" value="1"> Asar on time</label>
+        <label><input type="checkbox" name="magrib" value="1"> Magrib on time</label>
+        <label><input type="checkbox" name="isya" value="1"> Isya on time</label>
+        <label><input type="checkbox" name="tahajud" value="1"> Tahajud</label>
+        <label><input type="checkbox" name="qosubuh" value="1"> Qobliyah Subuh</label>
+        <label><input type="checkbox" name="dhuha" value="1"> Dhuha</label>
+        <label><input type="checkbox" name="qozuhur" value="1"> Qobliyah Zuhur</label>
+        <label><input type="checkbox" name="bazuhur" value="1"> Ba'diyah Zuhur</label>
     </div>
+    <div>
+        <label><input type="checkbox" name="sesubuh" value="1"> Sedekah Subuh</label>
+        <label><input type="checkbox" name="tilpagi" value="1"> Tilawah pagi</label>
+        <label><input type="checkbox" name="zikpagi" value="1"> Zikir pagi</label>
+        <label><input type="checkbox" name="tilmalam" value="1"> Tilawah malam</label>
+        <label><input type="checkbox" name="waqiah" value="1"> Baca Al Waqi'ah</label>
+        <label><input type="checkbox" name="mulk" value="1"> Baca Al Mulk</label>
+        <label><input type="checkbox" name="halangan" value="1"> Berhalangan</label>
+        <label><input type="checkbox" name="doakan" value="1"> Mendoakan orang lain</label>
+    </div>
+</div>
 
     <button type="submit" class="tombol1">Submit</button>
     <button type="button" class="cancel-button">Cancel</button>

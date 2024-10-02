@@ -1,0 +1,56 @@
+ALTER TABLE jurnals
+    ADD COLUMN uuid CHAR(36) NOT NULL UNIQUE AFTER id,  -- Menambahkan kolom uuid setelah kolom id
+    ADD COLUMN nama VARCHAR(255) NOT NULL AFTER uuid,   -- Menambahkan kolom nama setelah uuid
+    ADD COLUMN asal VARCHAR(255) NOT NULL AFTER uuid,   -- Menambahkan kolom nama setelah uuid
+    ADD COLUMN tanggal DATE NOT NULL AFTER nama,        -- Menambahkan kolom tanggal setelah nama
+    ADD COLUMN subuh_on_time BOOLEAN DEFAULT FALSE AFTER updated_at,     -- Menambahkan kolom subuh_on_time
+    ADD COLUMN zuhur_on_time BOOLEAN DEFAULT FALSE AFTER subuh_on_time,  -- Menambahkan kolom zuhur_on_time
+    ADD COLUMN asar_on_time BOOLEAN DEFAULT FALSE AFTER zuhur_on_time,   -- Menambahkan kolom asar_on_time
+    ADD COLUMN magrib_on_time BOOLEAN DEFAULT FALSE AFTER asar_on_time,  -- Menambahkan kolom magrib_on_time
+    ADD COLUMN isya_on_time BOOLEAN DEFAULT FALSE AFTER magrib_on_time,  -- Menambahkan kolom isya_on_time
+    ADD COLUMN tahajud BOOLEAN DEFAULT FALSE AFTER isya_on_time,         -- Menambahkan kolom tahajud
+    ADD COLUMN qobliyah_subuh BOOLEAN DEFAULT FALSE AFTER tahajud,       -- Menambahkan kolom qobliyah_subuh
+    ADD COLUMN dhuha BOOLEAN DEFAULT FALSE AFTER qobliyah_subuh,         -- Menambahkan kolom dhuha
+    ADD COLUMN qobliyah_zuhur BOOLEAN DEFAULT FALSE AFTER dhuha,         -- Menambahkan kolom qobliyah_zuhur
+    ADD COLUMN badiyah_zuhur BOOLEAN DEFAULT FALSE AFTER qobliyah_zuhur, -- Menambahkan kolom badiyah_zuhur
+    ADD COLUMN sedekah_subuh BOOLEAN DEFAULT FALSE AFTER badiyah_zuhur,  -- Menambahkan kolom sedekah_subuh
+    ADD COLUMN tilawah_pagi BOOLEAN DEFAULT FALSE AFTER sedekah_subuh,   -- Menambahkan kolom tilawah_pagi
+    ADD COLUMN zikir_pagi BOOLEAN DEFAULT FALSE AFTER tilawah_pagi,      -- Menambahkan kolom zikir_pagi
+    ADD COLUMN tilawah_malam BOOLEAN DEFAULT FALSE AFTER zikir_pagi,     -- Menambahkan kolom tilawah_malam
+    ADD COLUMN baca_al_waqiah BOOLEAN DEFAULT FALSE AFTER tilawah_malam, -- Menambahkan kolom baca_al_waqiah
+    ADD COLUMN baca_al_mulk BOOLEAN DEFAULT FALSE AFTER baca_al_waqiah,  -- Menambahkan kolom baca_al_mulk
+    ADD COLUMN berhalangan BOOLEAN DEFAULT FALSE AFTER baca_al_mulk,     -- Menambahkan kolom berhalangan
+    ADD COLUMN doakan_orang_lain BOOLEAN DEFAULT FALSE AFTER berhalangan;-- Menambahkan kolom doakan_orang_lain
+
+
+
+
+
+
+CREATE TABLE jurnals (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    uuid CHAR(36) NOT NULL UNIQUE,            -- Kolom UUID
+    nama VARCHAR(255) NOT NULL,               -- Kolom nama
+    asal VARCHAR(255) NOT NULL,               -- Kolom asal
+    tanggal DATE NOT NULL,                    -- Kolom tanggal
+    created_at TIMESTAMP NULL DEFAULT NULL,   -- Kolom timestamps untuk created_at
+    updated_at TIMESTAMP NULL DEFAULT NULL,   -- Kolom timestamps untuk updated_at
+    subuh_on_time BOOLEAN DEFAULT FALSE,      -- Kolom subuh_on_time
+    zuhur_on_time BOOLEAN DEFAULT FALSE,      -- Kolom zuhur_on_time
+    asar_on_time BOOLEAN DEFAULT FALSE,       -- Kolom asar_on_time
+    magrib_on_time BOOLEAN DEFAULT FALSE,     -- Kolom magrib_on_time
+    isya_on_time BOOLEAN DEFAULT FALSE,       -- Kolom isya_on_time
+    tahajud BOOLEAN DEFAULT FALSE,            -- Kolom tahajud
+    qobliyah_subuh BOOLEAN DEFAULT FALSE,     -- Kolom qobliyah_subuh
+    dhuha BOOLEAN DEFAULT FALSE,              -- Kolom dhuha
+    qobliyah_zuhur BOOLEAN DEFAULT FALSE,     -- Kolom qobliyah_zuhur
+    badiyah_zuhur BOOLEAN DEFAULT FALSE,      -- Kolom badiyah_zuhur
+    sedekah_subuh BOOLEAN DEFAULT FALSE,      -- Kolom sedekah_subuh
+    tilawah_pagi BOOLEAN DEFAULT FALSE,       -- Kolom tilawah_pagi
+    zikir_pagi BOOLEAN DEFAULT FALSE,         -- Kolom zikir_pagi
+    tilawah_malam BOOLEAN DEFAULT FALSE,      -- Kolom tilawah_malam
+    baca_al_waqiah BOOLEAN DEFAULT FALSE,     -- Kolom baca_al_waqiah
+    baca_al_mulk BOOLEAN DEFAULT FALSE,       -- Kolom baca_al_mulk
+    berhalangan BOOLEAN DEFAULT FALSE,        -- Kolom berhalangan
+    doakan_orang_lain BOOLEAN DEFAULT FALSE   -- Kolom doakan_orang_lain
+);
