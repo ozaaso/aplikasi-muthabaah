@@ -52,6 +52,24 @@ class JurnalsController extends Controller
 
 
     }
+
+
+    public function bulanan(string $nama, string $asal)
+    {
+        $results = Jurnals::where('nama', $nama)
+        ->where('asal', $asal) // Menambahkan kondisi untuk kolom asal
+        ->select('uuid') // Misalkan kolom uuid ada dalam tabel
+        ->distinct()
+        ->get();
+
+    // Mengonversi hasil ke dalam array
+    $uuids = $results->pluck('uuid')->toArray();
+
+        // $aktivitas = Activity::where('jurnal_uuid',$uuid)->firstOrFail();
+        $firstUuid = $results[0]['uuid'];
+        return $firstUuid;
+
+    }
     /**
      * Show the form for creating a new resource.
      */

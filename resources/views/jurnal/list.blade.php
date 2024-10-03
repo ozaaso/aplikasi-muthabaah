@@ -24,7 +24,7 @@
 <div class="container">
     <div class="list-container">
         @foreach ($users as $user)
-        <a href="bulanan" class="list-link">
+        <a href="/{{ $user->nama }}/{{ $user->asal }}" class="list-link">
             <div class="list-container01">
                 <div class="list-item">
                     <div class="list-details">
