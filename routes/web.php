@@ -32,9 +32,13 @@ Route::get('/harian', function () {
 
 // Route::resource('jurnal', JurnalsController::class); rute semua jurnal
 Route::get('/konten', [JurnalsController::class, 'index'])->name('jurnal.index'); // Menampilkan daftar jurna//l
+Route::get('/list', [JurnalsController::class, 'list'])->name('jurnal.index'); // Menampilkan daftar jurna//l
+
 // Route::get('jurnal/create', [JurnalsController::class, 'create'])->name('jurnal.create'); // Menampilkan form untuk membuat jurnal baru
 Route::post('konten', [JurnalsController::class, 'store'])->name('jurnal.store'); // Menyimpan jurnal baru
-// Route::get('jurnal/{jurnal}', [JurnalsController::class, 'show'])->name('jurnal.show'); // Menampilkan jurnal tertentu
+Route::get('harian/{uuid}', [JurnalsController::class, 'show'])->name('jurnal.show'); // Menampilkan jurnal tertentu
+
+// Route::get(uri: 'konten/{uuid}', [JurnalsController::class, 'show'])->name('jurnal.show'); // Menampilkan jurnal tertentu
 // Route::get('jurnal/{jurnal}/edit', [JurnalsController::class, 'edit'])->name('jurnal.edit'); // Menampilkan form untuk mengedit jurnal tertentu
 // Route::put('jurnal/{jurnal}', [JurnalsController::class, 'update'])->name('jurnal.update'); // Mengupdate jurnal tertentu
 // Route::delete('jurnal/{jurnal}', [JurnalsController::class, 'destroy'])->name('jurnal.destroy'); // Menghapus jurnal tertentu

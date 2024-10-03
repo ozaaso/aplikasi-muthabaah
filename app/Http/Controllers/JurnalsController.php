@@ -20,17 +20,38 @@ class JurnalsController extends Controller
      */
     public function index() : View | JsonResponse
     {
-        $jurnal = Jurnals::latest()->get();
+        // $jurnal = Jurnals::latest()->get();
 
-        $activity=Activity::all();
+        // $activity=Activity::all();
+
+        $users = Jurnals::all()
+        ->sortByDesc('tanggal')
+        ->groupBy(function ($item) {
+            return \Carbon\Carbon::parse($item->tanggal)->format('Y-m-d');
+        })
+        ->map(function ($groupedJurnals) {
+            return $groupedJurnals->sortByDesc('created_at');
+        });
 
 
         return view('jurnal.konten',[
-            'jurnals' => $jurnal,
-            'activities' => $activity
+            'users' => $users
         ]);
+
+
     }
 
+
+    public function list() : View | JsonResponse
+    {
+        $users = Jurnals::select('nama', 'asal')->distinct()->get();
+
+        return view('jurnal.list',[
+            'users' => $users
+        ]);
+
+
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -73,11 +94,15 @@ class JurnalsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Jurnals $jurnals)
+    public function show(string $uuid)
     {
-        // $jurnals=Jurnals::latest()->select(['uuid', 'nama']);
+        $user = Jurnals::where('uuid',$uuid)->firstOrFail();
+        $aktivitas = Activity::where('jurnal_uuid',$uuid)->firstOrFail();
 
-        // return $jurnals;
+        return view('jurnal.harian',[
+            'user' => $user,
+            'aktivitas' => $aktivitas
+        ]);
 
 
 

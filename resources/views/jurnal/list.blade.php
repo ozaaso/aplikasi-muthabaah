@@ -23,86 +23,19 @@
 
 <div class="container">
     <div class="list-container">
+        @foreach ($users as $user)
         <a href="bulanan" class="list-link">
             <div class="list-container01">
                 <div class="list-item">
                     <div class="list-details">
-                        <p>Mak Ici</p>
-                        <span>Jakarta</span>
+                        <p>{{ $user->nama }}</p>
+                        <span>{{$user->asal}}</span>
                     </div>
                 </div>
             </div>
         </a><br>
-        <a href="bulanan" class="list-link">
-            <div class="list-container01">
-                <div class="list-item">
-                    <div class="list-details">
-                        <p>Mak Ubay</p>
-                        <span>Cicalengka</span>
-                    </div>
-                </div>
-            </div>
-        </a><br>
-        <a href="bulanan" class="list-link">
-            <div class="list-container01">
-                <div class="list-item">
-                    <div class="list-details">
-                        <p>Mak Ubay</p>
-                        <span>Cicalengka</span>
-                    </div>
-                </div>
-            </div>
-        </a><br>
-        <a href="bulanan" class="list-link">
-            <div class="list-container01">
-                <div class="list-item">
-                    <div class="list-details">
-                        <p>Mak Ubay</p>
-                        <span>Cicalengka</span>
-                    </div>
-                </div>
-            </div>
-        </a><br>
-        <a href="bulanan" class="list-link">
-            <div class="list-container01">
-                <div class="list-item">
-                    <div class="list-details">
-                        <p>Mak Ubay</p>
-                        <span>Cicalengka</span>
-                    </div>
-                </div>
-            </div>
-        </a><br>
-        <a href="bulanan" class="list-link">
-            <div class="list-container01">
-                <div class="list-item">
-                    <div class="list-details">
-                        <p>Mak Ubay</p>
-                        <span>Cicalengka</span>
-                    </div>
-                </div>
-            </div>
-        </a><br>
-        <a href="bulanan" class="list-link">
-            <div class="list-container01">
-                <div class="list-item">
-                    <div class="list-details">
-                        <p>Mak Ubay</p>
-                        <span>Cicalengka</span>
-                    </div>
-                </div>
-            </div>
-        </a><br>
-        <a href="bulanan" class="list-link">
-            <div class="list-container01">
-                <div class="list-item">
-                    <div class="list-details">
-                        <p>Mak Ubay</p>
-                        <span>Cicalengka</span>
-                    </div>
-                </div>
-            </div>
-        </a><br>
+        @endforeach
+
 
                 <!-- Pagination -->
                 <div class="pagination">

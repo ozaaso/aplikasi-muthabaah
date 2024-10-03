@@ -23,55 +23,32 @@
 <div class="container">
     <!-- <h1>Muthoba'ah Harian</h1> -->
 
-    <div class="date">Monday, November 27, 2023  </div>
+    @foreach ($users as $tanggal => $usersByDate)
+    <div class="date">{{ \Carbon\Carbon::parse($tanggal)->format('l, F j, Y') }}</div>
     <div class="cards">
-        @foreach ($jurnals  as $jurnal)
-        <div class="card">
-            <div class="card-header">
-                <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
+        @foreach ($usersByDate as $user)
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
+                </div>
+
+                <a href="{{ url('harian/'.$user->uuid) }}" style="text-decoration: none;">
+                    <div class="card-content">
+                        <p class="name">{{ $user->nama }}</p>
+                        <p class="location">{{ $user->asal }}</p>
+                    </div>
+                </a>
+                <div class="context-menu">
+                    <a href="edit">Edit</a>
+                    <a href="delete">Delete</a>
+                </div>
             </div>
-           <a href="harian" style="text-decoration: none;"> <div class="card-content">
-                 <p class="name">{{ $jurnal->nama }}</p>
-                <p class="location">{{ $jurnal->asal }}</p>
-            </div></a>
-            <div class="context-menu">
-                <a href="edit">Edit</a>
-                <a href="delete">Delete</a>
-            </div>
-        </div>
         @endforeach
     </div>
+@endforeach
 
-    <div class="date">Sunday, November 26, 2023</div>
-    <div class="cards">
-        <div class="card">
-            <div class="card-header">
-                <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
-            </div>
-           <a href="harian" style="text-decoration: none;"> <div class="card-content">
-                <p class="name">Bunaiyyah</p>
-                <p class="location">Pinrang Sulsel</p>
-            </div></a>
-            <div class="context-menu">
-                <a href="edit">Edit</a>
-                <a href="delete">Delete</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
-            </div>
-           <a href="harian" style="text-decoration: none;"> <div class="card-content">
-                <p class="name">Bunaiyyah</p>
-                <p class="location">Pinrang Sulsel</p>
-            </div></a>
-            <div class="context-menu">
-                <a href="edit">Edit</a>
-                <a href="delete">Delete</a>
-            </div>
-        </div>
 
-    </div>
+
     <br>
                 <!-- Pagination -->
                 <div class="pagination">

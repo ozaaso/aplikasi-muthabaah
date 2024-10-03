@@ -1,8 +1,8 @@
-// Array of tab configurations, including IDs and target URLs
+// Array of tab configurations, including IDs and absolute target URLs (relative to root)
 const tabs = [
-    { id: 'tab-harian', url: 'konten' },
-    { id: 'tab-form', url: 'form' },
-    { id: 'tab-list', url: 'list' }
+    { id: 'tab-harian', url: '/konten' },
+    { id: 'tab-form', url: '/form' },
+    { id: 'tab-list', url: '/list' }
 ];
 
 // Add event listeners for each tab to handle navigation
@@ -12,6 +12,7 @@ tabs.forEach(tab => {
         window.location.href = tab.url;
     });
 });
+
 
 // Function to highlight the active tab based on the current URL
 function highlightActiveTab() {
