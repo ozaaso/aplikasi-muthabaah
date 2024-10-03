@@ -50,8 +50,15 @@
                 </div>
                 <div class="options" onclick="toggleMenu(this)">...</div>
                 <div class="dropdown-menu">
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
+                    <a href="/jurnal/{{ $result->uuid }}/edit" style="background: none; border: none; color: rgb(179, 86, 0);  cursor: pointer; padding: 0;">Edit </a>
+                    <br><br>
+                    <form action="/jurnal/{{ $result->uuid }}" method="POST" style="display: inline;">
+                        @method('delete')
+                        @csrf
+                        <button type="submit" onclick="return confirm('Are you sure you want to delete this?')" style="background: none; border: none; color: rgb(179, 86, 0);  cursor: pointer; padding: 0;">
+                            Delete
+                        </button>
+                    </form>
                 </div>
             </div>
             @endforeach
