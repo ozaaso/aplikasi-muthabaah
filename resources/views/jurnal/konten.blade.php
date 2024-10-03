@@ -39,9 +39,18 @@
                     </div>
                 </a>
                 <div class="context-menu">
-                    <a href="edit">Edit</a>
-                    <a href="delete">Delete</a>
+                    <a href="/jurnal/{{ $user->uuid }}/edit">Edit</a>
+
+                    <form action="/jurnal/{{ $user->uuid }}" method="POST" style="display: inline;">
+                        @method('delete')
+                        @csrf
+                        <button type="submit" onclick="return confirm('Are you sure you want to delete this?')" style="background: none; border: none; color: rgb(0, 0, 0);  cursor: pointer; padding: 0;">
+                            Delete
+                        </button>
+                    </form>
                 </div>
+
+
             </div>
         @endforeach
     </div>

@@ -58,16 +58,15 @@ class JurnalsController extends Controller
     {
         $results = Jurnals::where('nama', $nama)
         ->where('asal', $asal) // Menambahkan kondisi untuk kolom asal
-        ->select('uuid') // Misalkan kolom uuid ada dalam tabel
+        ->select('uuid','tanggal') // Misalkan kolom uuid ada dalam tabel
         ->distinct()
         ->get();
 
-    // Mengonversi hasil ke dalam array
-    $uuids = $results->pluck('uuid')->toArray();
-
-        // $aktivitas = Activity::where('jurnal_uuid',$uuid)->firstOrFail();
-        $firstUuid = $results[0]['uuid'];
-        return $firstUuid;
+        return view('jurnal.bulanan',[
+            'results' => $results,
+            'nama'  => $nama,
+            'asal'=> $asal
+        ]);
 
     }
     /**
@@ -129,24 +128,61 @@ class JurnalsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Jurnals $jurnals)
+    public function edit(string $uuid)
     {
-        //
+        $user = Jurnals::where('uuid',$uuid)->firstOrFail();
+        $aktivitas = Activity::where('jurnal_uuid',$uuid)->firstOrFail();
+
+
+        return view('jurnal.edit',[
+            'user' => $user,
+            'aktivitas' => $aktivitas
+        ]);
+
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Jurnals $jurnals)
+    public function update(Request $request, string $uuid)
     {
-        //
+           // Ambil data dari database menggunakan metode getById
+           $userDb = Jurnals::where('uuid',$uuid)->firstOrFail();
+            $b = Activity::where('jurnal_uuid',$uuid)->firstOrFail();
+        //    $dataDb = $this->getById($id);
+
+           // Data yang akan diperbarui dari request
+           $activity = $request->only([
+            'subuh', 'zuhur', 'asar', 'magrib', 'isya',
+            'tahajud', 'qosubuh', 'dhuha', 'qozuhur', 'bazuhur',
+            'sesubuh', 'tilpagi', 'zikpagi', 'tilmalam',
+            'waqiah', 'mulk', 'halangan', 'doakan'
+        ]);
+
+        foreach ($activity as $key => $value) {
+            $activity[$key] = intval($value);
+        }
+
+        $user = $request->only('nama','asal','tanggal');
+           // Melakukan update data di database
+
+        $userDb->update($user);
+        $b -> update($activity);
+        // return "mantab";
+        return redirect('/');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Jurnals $jurnals)
+    public function destroy(string $uuid)
     {
-        //
+          // Ambil data dari database menggunakan metode getById
+          $a = Jurnals::where('uuid',$uuid)->firstOrFail();
+          $b = Activity::where('jurnal_uuid',$uuid)->firstOrFail();
+
+          $a->delete();
+          $b->delete();
+          return redirect('/konten');
     }
 }

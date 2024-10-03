@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('jurnal/konten');
 // });
 
-// Route::get('/konten', function () {
-//     return view('jurnal/konten');
-// });
+Route::get('/', function () {
+    return redirect('/konten');
+});
 
 
 Route::get('/form', function () {
@@ -40,8 +40,8 @@ Route::get('harian/{uuid}', [JurnalsController::class, 'show'])->name('jurnal.sh
 Route::get('/{nama}/{asal}', [JurnalsController::class, 'bulanan'])->name('jurnal.bulanan'); // Menampilkan daftar jurna//l
 
 // Route::get(uri: 'konten/{uuid}', [JurnalsController::class, 'show'])->name('jurnal.show'); // Menampilkan jurnal tertentu
-// Route::get('jurnal/{jurnal}/edit', [JurnalsController::class, 'edit'])->name('jurnal.edit'); // Menampilkan form untuk mengedit jurnal tertentu
-// Route::put('jurnal/{jurnal}', [JurnalsController::class, 'update'])->name('jurnal.update'); // Mengupdate jurnal tertentu
-// Route::delete('jurnal/{jurnal}', [JurnalsController::class, 'destroy'])->name('jurnal.destroy'); // Menghapus jurnal tertentu
+Route::get('jurnal/{uuid}/edit', [JurnalsController::class, 'edit'])->name('jurnal.edit'); // Menampilkan form untuk mengedit jurnal tertentu
+Route::put('jurnal/{uuid}', [JurnalsController::class, 'update'])->name('jurnal.update'); // Mengupdate jurnal tertentu
+Route::delete('jurnal/{uuid}', [JurnalsController::class, 'destroy'])->name('jurnal.destroy'); // Menghapus jurnal tertentu
 
 
