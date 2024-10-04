@@ -54,7 +54,7 @@ class JurnalsController extends Controller
 
     public function list() : View | JsonResponse
     {
-        $users = Jurnals::select('nama', 'asal')->distinct()->get();
+        $users = Jurnals::select('nama', 'asal')->distinct()->paginate(15);
 
         return view('jurnal.list',[
             'users' => $users
@@ -70,7 +70,7 @@ class JurnalsController extends Controller
         ->where('asal', $asal) // Menambahkan kondisi untuk kolom asal
         ->select('uuid','tanggal') // Misalkan kolom uuid ada dalam tabel
         ->distinct()
-        ->get();
+        ->paginate(31);
 
         return view('jurnal.bulanan',[
             'results' => $results,

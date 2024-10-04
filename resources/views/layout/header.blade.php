@@ -8,11 +8,6 @@
 
 
 
-    <!-- design navbar -->
-    <link rel="stylesheet" href="../../public/css/navbar.css">
- <!-- design tab -->
- <link rel="stylesheet" href="../../public/css/tab.css">
 
- <link rel="stylesheet" href="../../public/css/konten.css">
 
 </head>
