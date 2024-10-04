@@ -94,6 +94,7 @@ h1 {
     padding: 5px;
     text-decoration: none;
     color: black;
+    gap: 10px;
 }
 
 .context-menu a:hover {
@@ -128,13 +129,50 @@ h1 {
 }
 
 .context-menu-item {
-    background: none;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    padding: 6px 12px;
     border: none;
-    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    font-size: 10px; /* Ukuran font diperkecil */
+    font-weight: bold;
     cursor: pointer;
-    padding: 0;
-    text-decoration: none; /* Menghapus underline pada link */
-    font: inherit; /* Menggunakan font yang sama seperti elemen induknya */
+    transition: all 0.3s ease;
 }
 
 
+.context-menu {
+
+}
+
+
+
+.edit-item {
+    background-color: #ffffff;
+    color: #333;
+    border: 2px solid #FFA500;
+}
+
+.edit-item:hover {
+    background-color: #000000;
+    color: #ff7d04;
+}
+
+.delete-item {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #d9534f;
+}
+
+.delete-item:hover {
+    background-color: #d9534f;
+    color: #ffffff;
+}
+
+.context-menu-item {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.context-menu-item:active {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}

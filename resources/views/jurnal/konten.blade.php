@@ -7,9 +7,9 @@
 <link href="{{ asset('assets/css/tab.css') }}" rel="stylesheet" >
 {{-- dinamis --}}
 <link href="{{ asset('assets/css/konten.css') }}" rel="stylesheet" >
-{{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
+<style>
 
-{{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
+</style>
 
 @endsection
 
@@ -54,54 +54,6 @@
                     </form>
                 </div>
 
-                <style>
-                    .context-menu {
-                        display: flex;
-                        gap: 10px;
-                    }
-
-                    .context-menu-item {
-                        text-decoration: none;
-                        font-family: Arial, sans-serif;
-                        padding: 6px 12px;
-                        border: none;
-                        border-radius: 5px;
-                        font-size: 10px; /* Ukuran font diperkecil */
-                        font-weight: bold;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                    }
-
-                    .edit-item {
-                        background-color: #ffffff;
-                        color: #333;
-                        border: 2px solid #FFA500;
-                    }
-
-                    .edit-item:hover {
-                        background-color: #000000;
-                        color: #ff7d04;
-                    }
-
-                    .delete-item {
-                        background-color: #ffffff;
-                        color: #000000;
-                        border: 2px solid #d9534f;
-                    }
-
-                    .delete-item:hover {
-                        background-color: #d9534f;
-                        color: #ffffff;
-                    }
-
-                    .context-menu-item {
-                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                    }
-
-                    .context-menu-item:active {
-                        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-                    }
-                </style>
 
 
 
