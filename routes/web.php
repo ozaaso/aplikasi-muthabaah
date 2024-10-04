@@ -45,3 +45,4 @@ Route::put('jurnal/{uuid}', [JurnalsController::class, 'update'])->name('jurnal.
 Route::delete('jurnal/{uuid}', [JurnalsController::class, 'destroy'])->name('jurnal.destroy'); // Menghapus jurnal tertentu
 
 
+Route::get('/jurnal/search/{name}', [JurnalsController::class, 'searchByName'])->name('jurnal.search.name');

@@ -185,4 +185,23 @@ class JurnalsController extends Controller
           $b->delete();
           return redirect('/konten');
     }
+
+
+    public function searchByName(string $query)
+    {
+        $users = Jurnals::where('nama', 'like', "%{$query}%")
+        ->orWhere('asal', 'like', "%{$query}%")
+        ->select(['nama', 'asal'])
+        ->distinct()
+        ->get();
+
+        // $users = Jurnals::select('nama', 'asal')->distinct()->get();
+
+
+
+            // return $users;
+        return view('jurnal.pencarian', [
+            'users' => $users
+        ]);
+    }
 }
