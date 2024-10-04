@@ -59,6 +59,9 @@
         <label><input type="checkbox" name="dhuha" value="1" {{ $aktivitas->dhuha == 1 ? 'checked' : '' }}> Dhuha</label>
         <label><input type="checkbox" name="qozuhur" value="1" {{ $aktivitas->qozuhur == 1 ? 'checked' : '' }}> Qobliyah Zuhur</label>
         <label><input type="checkbox" name="bazuhur" value="1" {{ $aktivitas->bazuhur == 1 ? 'checked' : '' }}> Ba'diyah Zuhur</label>
+        <label><input type="checkbox" name="bamagrib" value="1" {{ $aktivitas->bamagrib == 1 ? 'checked' : '' }}> Ba'diyah Magrib</label>
+        <label><input type="checkbox" name="baisya" value="1" {{ $aktivitas->baisya == 1 ? 'checked' : '' }}> Ba'diyah Isya</label>
+
     </div>
     <div>
         <label><input type="checkbox" name="sesubuh" value="1" {{ $aktivitas->sesubuh == 1 ? 'checked' : '' }}> Sedekah Subuh</label>

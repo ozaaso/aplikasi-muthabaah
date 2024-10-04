@@ -96,7 +96,7 @@ class JurnalsController extends Controller
                 'subuh', 'zuhur', 'asar', 'magrib', 'isya',
                 'tahajud', 'qosubuh', 'dhuha', 'qozuhur', 'bazuhur',
                 'sesubuh', 'tilpagi', 'zikpagi', 'tilmalam',
-                'waqiah', 'mulk', 'halangan', 'doakan'
+                'waqiah', 'mulk', 'halangan', 'doakan','bamagrib','baisya'
             ]);
 
             foreach ($activity as $key => $value) {
@@ -165,7 +165,7 @@ class JurnalsController extends Controller
             'subuh', 'zuhur', 'asar', 'magrib', 'isya',
             'tahajud', 'qosubuh', 'dhuha', 'qozuhur', 'bazuhur',
             'sesubuh', 'tilpagi', 'zikpagi', 'tilmalam',
-            'waqiah', 'mulk', 'halangan', 'doakan'
+            'waqiah', 'mulk', 'halangan', 'doakan','bamagrib','baisya'
         ]);
 
         foreach ($activity as $key => $value) {

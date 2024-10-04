@@ -59,6 +59,8 @@
         <label><input type="checkbox" name="dhuha" value="1"> Dhuha</label>
         <label><input type="checkbox" name="qozuhur" value="1"> Qobliyah Zuhur</label>
         <label><input type="checkbox" name="bazuhur" value="1"> Ba'diyah Zuhur</label>
+        <label><input type="checkbox" name="bamagrib" value="1"> Ba'diyah Magrib</label>
+        <label><input type="checkbox" name="baisya" value="1"> Ba'diyah Isya</label>
     </div>
     <div>
         <label><input type="checkbox" name="sesubuh" value="1"> Sedekah Subuh</label>
