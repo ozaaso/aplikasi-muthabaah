@@ -6,7 +6,7 @@
     </div>
 
     <div style="flex-grow: 1; display: flex; justify-content: center;">
-        <a href="https://fontmeme.com/fonts/new-stencil-tfb-font/">
+        <a href="/">
             <img src="https://fontmeme.com/permalink/240930/098658dbb6b3db7de617e1d2eaf9dfe2.png" alt="new-stencil-tfb-font" border="0">
         </a>
     </div>
