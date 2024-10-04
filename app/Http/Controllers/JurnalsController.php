@@ -20,22 +20,32 @@ class JurnalsController extends Controller
      */
     public function index() : View | JsonResponse
     {
-        // $jurnal = Jurnals::latest()->get();
 
-        // $activity=Activity::all();
+        // $users = Jurnals::all()
+        // ->sortByDesc('tanggal')
+        // ->groupBy(function ($item) {
+        //     return \Carbon\Carbon::parse($item->tanggal)->format('Y-m-d');
+        // })
+        // ->map(function ($groupedJurnals) {
+        //     return $groupedJurnals->sortByDesc('created_at');
+        // });
 
-        $users = Jurnals::all()
-        ->sortByDesc('tanggal')
-        ->groupBy(function ($item) {
-            return \Carbon\Carbon::parse($item->tanggal)->format('Y-m-d');
-        })
-        ->map(function ($groupedJurnals) {
-            return $groupedJurnals->sortByDesc('created_at');
-        });
+        $users = Jurnals::orderBy('tanggal', 'desc')
+        ->paginate(50); // Ini menghasilkan query builder dengan paginasi
+
+    // Jika Anda ingin mengelompokkan berdasarkan 'tanggal' setelah paginasi:
+    $groupedUsers = $users->groupBy(function ($item) {
+        return \Carbon\Carbon::parse($item->tanggal)->format('Y-m-d');
+    });
+
+    // Di view, gunakan $users untuk paginasi
+    // $users->links() bisa dipanggil di view
+
 
 
         return view('jurnal.konten',[
-            'users' => $users
+            'users' => $groupedUsers,
+            'halaman' => $users
         ]);
 
 
