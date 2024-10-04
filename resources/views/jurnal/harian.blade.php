@@ -74,7 +74,7 @@
             <label><input type="checkbox" name="sesubuh" value="{{ $aktivitas->sesubuh }}" {{ $aktivitas->sesubuh == 1 ? 'checked' : '' }}> Sedekah Subuh</label>
             <label><input type="checkbox" name="tilpagi" value="{{ $aktivitas->tilpagi }}" {{ $aktivitas->tilpagi == 1 ? 'checked' : '' }}> Tilawah Qur'an</label>
             <label><input type="checkbox" name="zikpagi" value="{{ $aktivitas->zikpagi }}" {{ $aktivitas->zikpagi == 1 ? 'checked' : '' }}> Zikir pagi</label>
-            <label><input type="checkbox" name="tilmalam" value="{{ $aktivitas->tilmalam }}" {{ $aktivitas->tilmalam == 1 ? 'checked' : '' }}> Witir</label>
+            <label><input type="checkbox" name="tilmalam" value="{{ $aktivitas->tilmalam }}" {{ $aktivitas->tilmalam == 1 ? 'checked' : '' }}> Zikir petang</label>
             <label><input type="checkbox" name="waqiah" value="{{ $aktivitas->waqiah }}" {{ $aktivitas->waqiah == 1 ? 'checked' : '' }}> Baca Al Waqi'ah</label>
             <label><input type="checkbox" name="mulk" value="{{ $aktivitas->mulk }}" {{ $aktivitas->mulk == 1 ? 'checked' : '' }}> Baca Al Mulk</label>
             <label><input type="checkbox" name="halangan" value="{{ $aktivitas->halangan }}" {{ $aktivitas->halangan == 1 ? 'checked' : '' }}> Berhalangan</label>
