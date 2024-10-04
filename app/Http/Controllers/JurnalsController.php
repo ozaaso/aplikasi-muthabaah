@@ -63,21 +63,20 @@ class JurnalsController extends Controller
 
     }
 
-
     public function bulanan(string $nama, string $asal)
     {
         $results = Jurnals::where('nama', $nama)
-        ->where('asal', $asal) // Menambahkan kondisi untuk kolom asal
-        ->select('uuid','tanggal') // Misalkan kolom uuid ada dalam tabel
-        ->distinct()
-        ->paginate(31);
+            ->where('asal', $asal) // Menambahkan kondisi untuk kolom asal
+            ->select('uuid', 'tanggal') // Kolom uuid dan tanggal dipilih
+            ->orderBy('tanggal', 'desc') // Mengurutkan berdasarkan tanggal terbaru
+            ->distinct()
+            ->paginate(31);
 
-        return view('jurnal.bulanan',[
+        return view('jurnal.bulanan', [
             'results' => $results,
-            'nama'  => $nama,
-            'asal'=> $asal
+            'nama' => $nama,
+            'asal' => $asal
         ]);
-
     }
     /**
      * Show the form for creating a new resource.

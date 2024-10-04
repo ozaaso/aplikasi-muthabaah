@@ -41,27 +41,36 @@
 
 
 
-            @foreach ($results as $result)
+            @php
+            use Carbon\Carbon;
+            Carbon::setLocale('id');
+        @endphp
 
+        @foreach ($results as $result)
             <div class="list-item">
                 <div class="list-details">
-                    <p><a href="/harian/{{ $result->uuid }}" class="list-link">{{ $result->tanggal }}</a>   </p>
+                    <p>
+                        <a href="/harian/{{ $result->uuid }}" class="list-link">
+                            {{ Carbon::parse($result->tanggal)->translatedFormat('l, j F Y') }}
+                        </a>
+                    </p>
                     <span></span>
                 </div>
                 <div class="options" onclick="toggleMenu(this)">...</div>
                 <div class="dropdown-menu">
-                    <a href="/jurnal/{{ $result->uuid }}/edit" style="background: none; border: none; color: rgb(179, 86, 0);  cursor: pointer; padding: 0;">Edit </a>
+                    <a href="/jurnal/{{ $result->uuid }}/edit" style="background: none; border: none; color: rgb(179, 86, 0); cursor: pointer; padding: 0;">Edit</a>
                     <br><br>
                     <form action="/jurnal/{{ $result->uuid }}" method="POST" style="display: inline;">
                         @method('delete')
                         @csrf
-                        <button type="submit" onclick="return confirm('Are you sure you want to delete this?')" style="background: none; border: none; color: rgb(179, 86, 0);  cursor: pointer; padding: 0;">
+                        <button type="submit" onclick="return confirm('Are you sure you want to delete this?')" style="background: none; border: none; color: rgb(179, 86, 0); cursor: pointer; padding: 0;">
                             Delete
                         </button>
                     </form>
                 </div>
             </div>
-            @endforeach
+        @endforeach
+
 
             {{ $results->links() }}
 
