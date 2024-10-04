@@ -1,4 +1,8 @@
-fitur search
-fitur paging
-pencarian bulan
+fitur search v
+fitur paging v
+pencarian bulan v
 fitur export
+
+urutan latest konten
+tab tulisan form list kontetn tidak bisa di block / lock
+notif hapus

@@ -43,16 +43,65 @@
                     </div>
                 </a>
                 <div class="context-menu">
-                    <a href="/jurnal/{{ $user->uuid }}/edit" class="context-menu-item">ubah</a>
+                    <a href="/jurnal/{{ $user->uuid }}/edit" class="context-menu-item edit-item">&nbsp;&nbsp;&nbsp;&nbsp;edit</a>
 
                     <form action="/jurnal/{{ $user->uuid }}" method="POST" style="display: inline;">
                         @method('delete')
                         @csrf
-                        <button type="submit" onclick="return confirm('Are you sure you want to delete this?')" class="context-menu-item">
+                        <button type="submit" onclick="return confirm('yakin ingin menghapus data ini? Pastikan buat data orang lain yang antum hapus')" class="context-menu-item delete-item">
                             hapus
                         </button>
                     </form>
                 </div>
+
+                <style>
+                    .context-menu {
+                        display: flex;
+                        gap: 10px;
+                    }
+
+                    .context-menu-item {
+                        text-decoration: none;
+                        font-family: Arial, sans-serif;
+                        padding: 6px 12px;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 10px; /* Ukuran font diperkecil */
+                        font-weight: bold;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                    }
+
+                    .edit-item {
+                        background-color: #ffffff;
+                        color: #333;
+                        border: 2px solid #FFA500;
+                    }
+
+                    .edit-item:hover {
+                        background-color: #000000;
+                        color: #ff7d04;
+                    }
+
+                    .delete-item {
+                        background-color: #ffffff;
+                        color: #000000;
+                        border: 2px solid #d9534f;
+                    }
+
+                    .delete-item:hover {
+                        background-color: #d9534f;
+                        color: #ffffff;
+                    }
+
+                    .context-menu-item {
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .context-menu-item:active {
+                        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+                    }
+                </style>
 
 
 

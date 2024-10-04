@@ -17,6 +17,7 @@
     text-align: center;
     cursor: pointer;
     flex: 1;
+    user-select: none; /* Mencegah teks agar tidak bisa disorot */
 }
 .tab span {
     display: block;
