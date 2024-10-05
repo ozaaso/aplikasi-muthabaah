@@ -179,3 +179,59 @@ bol */
     color: #5d5d5d;
 }
 
+
+
+
+.context-menu-item {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* position: relative;  */
+    /* left: 50%; */
+   
+}
+
+
+.context-menu {
+
+}
+
+
+
+.edit-item {
+    background-color: #fee16d;
+    color: #000000;
+    /* border: 2px solid #FFA500; */
+    
+}
+
+.edit-item:hover {
+    background-color: #ffdf74;
+    color: #737373;
+}
+
+.delete-item {
+    background-color: #ff0000;
+    color: #ffffff;
+    /* border: 2px solid #d9534f; */
+}
+
+.delete-item:hover {
+    background-color: #d9534f;
+    color: #ffffff;
+}
+
+.context-menu-item {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.context-menu-item:active {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}

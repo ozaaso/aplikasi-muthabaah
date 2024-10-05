@@ -9,6 +9,8 @@
 <link href="{{ asset('assets/css/list.css') }}" rel="stylesheet" >
 <link href="{{ asset('assets/css/harian.css') }}" rel="stylesheet" >
 
+
+
 @endsection
 
 @section('js')
@@ -48,7 +50,12 @@
         <div class="list-details01">
             <p>{{ $user->nama }}</p>
             <span>{{$user->asal}}</span>
-            <span>{{$user->tanggal}}</span>
+            @php
+            use Carbon\Carbon;
+            Carbon::setLocale('id');
+            @endphp
+            <span>{{ Carbon::parse($user->tanggal)->translatedFormat('l, j F Y') }}</span>
+           
         </div>
     </div>
     <h2>Formulir Jurnal</h2>
@@ -87,7 +94,18 @@
 
 
 </form>
-
+<br>
+<div class="context-menu">
+    <a href="/jurnal/{{ $user->uuid }}/edit" class="context-menu-item edit-item">✏️ edit &nbsp;&nbsp;</a>
+    {{-- <br><br> --}}&nbsp;
+    <form action="/jurnal/{{ $user->uuid }}" method="POST" style="display: inline;">
+        @method('delete')
+        @csrf
+        <button type="submit" onclick="return confirm('yakin ingin menghapus data ini? Pastikan buat data orang lain yang antum hapus')" class="context-menu-item delete-item">
+            🗑️ delete
+        </button>
+    </form>
+</div>
     </div>
 
 </div><br><br><br><br>
