@@ -26,7 +26,7 @@
 
     <div class="list-container01">
         <div class="list-item">
-            <div class="list-icon"></div>
+            <div class="list-icon"><img src="{{ asset('assets/img/person.png') }}" width="50" height="50"></div>
             <div class="list-details01">
                 <p>{{$nama}}</p>
                 <span>{{$asal}}</span>

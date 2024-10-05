@@ -31,7 +31,7 @@
 
 
 
-    
+
 </script>
 @endsection
 
@@ -46,7 +46,8 @@
 
     <div class="list-container">
     <div class="list-item01">
-        <div class="list-icon"></div>
+        <div class="list-icon"><img src="{{ asset('assets/img/person.png') }}" width="50" height="50">
+        </div>
         <div class="list-details01">
             <p>{{ $user->nama }}</p>
             <span>{{$user->asal}}</span>
@@ -55,7 +56,7 @@
             Carbon::setLocale('id');
             @endphp
             <span>{{ Carbon::parse($user->tanggal)->translatedFormat('l, j F Y') }}</span>
-           
+
         </div>
     </div>
     <h2>Formulir Jurnal</h2>
