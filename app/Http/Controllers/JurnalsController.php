@@ -20,36 +20,30 @@ class JurnalsController extends Controller
      */
     public function index() : View | JsonResponse
     {
-
-        // $users = Jurnals::all()
-        // ->sortByDesc('tanggal')
-        // ->groupBy(function ($item) {
-        //     return \Carbon\Carbon::parse($item->tanggal)->format('Y-m-d');
-        // })
-        // ->map(function ($groupedJurnals) {
-        //     return $groupedJurnals->sortByDesc('created_at');
-        // });
-
+        // Mengambil data dan mengurutkan berdasarkan 'tanggal' terlebih dahulu, lalu 'created_at' dari yang terbaru
         $users = Jurnals::orderBy('tanggal', 'desc')
-        ->paginate(50); // Ini menghasilkan query builder dengan paginasi
+            ->orderBy('created_at', 'desc')
+            ->paginate(50); // Ini menghasilkan query builder dengan paginasi
 
-    // Jika Anda ingin mengelompokkan berdasarkan 'tanggal' setelah paginasi:
-    $groupedUsers = $users->groupBy(function ($item) {
-        return \Carbon\Carbon::parse($item->tanggal)->format('Y-m-d');
-    });
+        // Mengelompokkan data berdasarkan 'tanggal' setelah paginasi
+        $groupedUsers = $users->groupBy(function ($item) {
+            return \Carbon\Carbon::parse($item->tanggal)->format('Y-m-d');
+        });
 
-    // Di view, gunakan $users untuk paginasi
-    // $users->links() bisa dipanggil di view
+        // Mengurutkan data di dalam setiap grup berdasarkan 'created_at' dari yang terbaru
+        $groupedUsers = $groupedUsers->map(function ($group) {
+            return $group->sortByDesc('created_at');
+        });
 
+        // Di view, gunakan $users untuk paginasi
+        // $users->links() bisa dipanggil di view
 
-
-        return view('jurnal.konten',[
+        return view('jurnal.konten', [
             'users' => $groupedUsers,
             'halaman' => $users
         ]);
-
-
     }
+
 
 
     public function list() : View | JsonResponse
