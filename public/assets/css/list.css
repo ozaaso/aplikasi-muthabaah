@@ -14,7 +14,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    
+
 }
 .list-container01 {
     background-color: #FFE7C6;
@@ -29,24 +29,24 @@ body {
     align-items: center;
     padding: 15px 0;
     border-bottom: 1px solid #ddd;
-    
+
 }
 .list-item01:last-child {
     border-bottom: none;
 }
 .list-details01 {
-    
+
     flex-grow: 1;
 }
 .list-details01 p {
-    
+
     margin: 0;
     font-size: 20px;
 }
 .list-details01 span {
     display: block;
     font-size: 15px;
-    color: #888;
+    color: #7e3f04;
 }
 .navbar {
     display: flex;
@@ -91,7 +91,7 @@ body {
     align-items: center;
     padding: 15px 0;
     border-bottom: 1px solid #ddd;
-    
+
 }
 .list-item:last-child {
     border-bottom: none;

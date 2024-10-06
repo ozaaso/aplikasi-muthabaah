@@ -59,7 +59,8 @@
 
         </div>
     </div>
-    <h2>Formulir Jurnal</h2>
+    <br>
+    {{-- <h2>Formulir Jurnal</h2> --}}
 <form>
 
     <div class="checkbox-grid">
