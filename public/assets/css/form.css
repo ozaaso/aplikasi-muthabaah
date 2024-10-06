@@ -51,20 +51,21 @@ body {
 }
 
 .checkbox-grid {
-    font-size: 13px;
+    font-size: 10px;
     accent-color: #FFA500;
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Optional: adds space between the columns */
+    gap: 10px; /* Optional: adds space between the columns */
 }
 
 .checkbox-grid div {
-    width: 48%; /* Each column will take up roughly half of the available space */
+    width: 60%; /* Each column will take up roughly half of the available space */
 }
 
 .checkbox-grid label {
     display: block; /* Ensures each checkbox label appears on its own line */
-    margin-bottom: 10px; /* Optional: adds space between checkboxes */
+    margin-bottom: 13px; /* Optional: adds space between checkboxes */
+    font-size: 11px;
 }
 
 /* Gaya untuk checkbox di halaman form */

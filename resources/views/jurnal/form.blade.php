@@ -9,7 +9,7 @@
 
 <link href="{{ asset('assets/css/list.css') }}" rel="stylesheet" >
 <link href="{{ asset('assets/css/form.css') }}" rel="stylesheet" >
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> --}}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
 
 
@@ -45,7 +45,7 @@
     <label for="tanggal">Tanggal <span style="color: red;">*</span></label>
     <input type="date" class="form-control" id="tanggal" name="tanggal" required>
 <br>
-
+<br>
 <div class="checkbox-grid">
     <div>
 
@@ -67,8 +67,8 @@
         <label><input type="checkbox" name="tilpagi" value="1"> Tilawah Qur'an</label>
         <label><input type="checkbox" name="zikpagi" value="1"> Zikir pagi</label>
         <label><input type="checkbox" name="tilmalam" value="1"> Zikir petang</label>
-        <label><input type="checkbox" name="waqiah" value="1"> Al Waqi'ah/Al Mulk</label>
-        <label><input type="checkbox" name="mulk" value="1"> tambah ilmu/Kajian</label>
+        <label><input type="checkbox" name="waqiah" value="1"> Al Waqi'ah / Al Mulk</label>
+        <label><input type="checkbox" name="mulk" value="1"> tambah ilmu / kajian</label>
         <label><input type="checkbox" name="halangan" value="1"> Berhalangan</label>
         <label><input type="checkbox" name="doakan" value="1"> Mendoakan orang lain</label>
     </div>

@@ -57,12 +57,13 @@ body {
 }
 
 .checkbox-grid div {
-    width: 48%; /* Each column will take up roughly half of the available space */
+    width: 60%; /* Each column will take up roughly half of the available space */
 }
 
 .checkbox-grid label {
     display: block; /* Ensures each checkbox label appears on its own line */
     margin-bottom: 10px; /* Optional: adds space between checkboxes */
+    font-size: 11px;
 }
 
 /* Gaya untuk checkbox di halaman form */

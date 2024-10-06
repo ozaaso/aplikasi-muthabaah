@@ -90,8 +90,8 @@
             <label><input type="checkbox" name="tilpagi" value="{{ $aktivitas->tilpagi }}" {{ $aktivitas->tilpagi == 1 ? 'checked' : '' }}> Tilawah Qur'an</label>
             <label><input type="checkbox" name="zikpagi" value="{{ $aktivitas->zikpagi }}" {{ $aktivitas->zikpagi == 1 ? 'checked' : '' }}> Zikir pagi</label>
             <label><input type="checkbox" name="tilmalam" value="{{ $aktivitas->tilmalam }}" {{ $aktivitas->tilmalam == 1 ? 'checked' : '' }}> Zikir petang</label>
-            <label><input type="checkbox" name="waqiah" value="{{ $aktivitas->waqiah }}" {{ $aktivitas->waqiah == 1 ? 'checked' : '' }}> Al Waqi'ah/Al Mulk</label>
-            <label><input type="checkbox" name="mulk" value="{{ $aktivitas->mulk }}" {{ $aktivitas->mulk == 1 ? 'checked' : '' }}> tambah ilmu/kajian</label>
+            <label><input type="checkbox" name="waqiah" value="{{ $aktivitas->waqiah }}" {{ $aktivitas->waqiah == 1 ? 'checked' : '' }}> Al Waqi'ah / Al Mulk</label>
+            <label><input type="checkbox" name="mulk" value="{{ $aktivitas->mulk }}" {{ $aktivitas->mulk == 1 ? 'checked' : '' }}> tambah ilmu / kajian</label>
             <label><input type="checkbox" name="halangan" value="{{ $aktivitas->halangan }}" {{ $aktivitas->halangan == 1 ? 'checked' : '' }}> Berhalangan</label>
             <label><input type="checkbox" name="doakan" value="{{ $aktivitas->doakan }}" {{ $aktivitas->doakan == 1 ? 'checked' : '' }}> Mendoakan orang lain</label>
 
@@ -110,7 +110,7 @@
     <form action="/jurnal/{{ $user->uuid }}" method="POST" style="display: inline;">
         @method('delete')
         @csrf
-        <button type="submit" onclick="return confirm('yakin ingin menghapus data ini? Pastikan buat data orang lain yang antum hapus')" class="context-menu-item delete-item">
+        <button type="submit" onclick="return confirm('yakin ingin menghapus data ini? Pastikan bukan data orang lain yang antum hapus')" class="context-menu-item delete-item">
             🗑️ delete
         </button>
     </form>
