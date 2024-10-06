@@ -194,7 +194,7 @@ bol */
     transition: all 0.3s ease;
     /* position: relative;  */
     /* left: 50%; */
-   
+
 }
 
 
@@ -208,7 +208,7 @@ bol */
     background-color: #fee16d;
     color: #000000;
     /* border: 2px solid #FFA500; */
-    
+
 }
 
 .edit-item:hover {
@@ -229,9 +229,16 @@ bol */
 
 .context-menu-item {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
+
 }
 
 .context-menu-item:active {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
+
+
+
+
+
+
+

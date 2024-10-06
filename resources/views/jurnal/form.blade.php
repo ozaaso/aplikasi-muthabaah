@@ -63,12 +63,12 @@
         <label><input type="checkbox" name="baisya" value="1"> Ba'diyah Isya</label>
     </div>
     <div>
-        <label><input type="checkbox" name="sesubuh" value="1"> Sedekah Subuh</label>
+        <label><input type="checkbox" name="sesubuh" value="1"> Sedekah</label>
         <label><input type="checkbox" name="tilpagi" value="1"> Tilawah Qur'an</label>
         <label><input type="checkbox" name="zikpagi" value="1"> Zikir pagi</label>
         <label><input type="checkbox" name="tilmalam" value="1"> Zikir petang</label>
-        <label><input type="checkbox" name="waqiah" value="1"> Baca Al Waqi'ah</label>
-        <label><input type="checkbox" name="mulk" value="1"> Baca Al Mulk</label>
+        <label><input type="checkbox" name="waqiah" value="1"> Al Waqi'ah/Al Mulk</label>
+        <label><input type="checkbox" name="mulk" value="1"> tambah ilmu/Kajian</label>
         <label><input type="checkbox" name="halangan" value="1"> Berhalangan</label>
         <label><input type="checkbox" name="doakan" value="1"> Mendoakan orang lain</label>
     </div>
