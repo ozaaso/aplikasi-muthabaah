@@ -1,5 +1,9 @@
- /* Tab Bar Styles */
- .tab-bar {
+/* Tab Bar Styles */
+
+.tab-bar-container {
+    justify-content: center; /* Rata tengah secara horizontal */
+    align-items: center; /* Rata tengah secara vertikal */
+    /* text-align: center; */
     position: fixed;
     bottom: 0;
     left: 0;
@@ -12,19 +16,46 @@
     padding: 15px 0;
     border-top: 1px solid #ddd;
     height: 50px; /* Larger height */
+    z-index: 999; /* Make sure it stays on top */
 }
+
+.tab-bar {
+    text-align: center;
+
+    width: 300px;
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    /* border-top: 1px solid #ddd; */
+    height: 50px; /* Larger height */
+    z-index: 999; /* Make sure it stays on top */
+}
+
 .tab {
+    width: 100px;
     text-align: center;
     cursor: pointer;
     flex: 1;
-    user-select: none; /* Mencegah teks agar tidak bisa disorot */
+    user-select: none; /* Prevent text selection */
 }
+
 .tab span {
-    display: block;
+    width: 100px;
+    /* display: block; */
     font-size: 18px; /* Bigger font */
     color: #333;
 }
+
+/* Active Tab */
 .tab.active span {
+    width: 100px;
     color: #FFC488;
     font-weight: bold;
 }
