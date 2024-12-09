@@ -27,40 +27,64 @@
 <div class="container">
     <!-- <h1>Muthoba'ah Harian</h1> -->
 
-    @foreach ($users as $tanggal => $usersByDate)
-    <div class="date">{{ \Carbon\Carbon::parse($tanggal)->format('l, F j, Y') }}</div>
+
+    <div class="date"></div>
     <div class="cards">
-        @foreach ($usersByDate as $user)
+
             <div class="card">
                 <div class="card-header">
                     <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
                 </div>
 
-                <a href="{{ url('harian/'.$user->uuid) }}" style="text-decoration: none;">
+                <a href="" style="text-decoration: none;">
                     <div class="card-content">
-                        <p class="name">{{ $user->nama }}</p>
-                        <p class="location">{{ $user->asal }}</p>
+                        <p class="name">fijar</p>
+                        <p class="location">padang</p>
                     </div>
                 </a>
-                <div class="context-menu">
-                    <a href="/jurnal/{{ $user->uuid }}/edit" class="context-menu-item edit-item">&nbsp;&nbsp;&nbsp;&nbsp;edit</a>
+            </div>
 
-                    <form action="/jurnal/{{ $user->uuid }}" method="POST" style="display: inline;">
-                        @method('delete')
-                        @csrf
-                        <button type="submit" onclick="return confirm('yakin ingin menghapus data ini? Pastikan buat data orang lain yang antum hapus')" class="context-menu-item delete-item">
-                            hapus
-                        </button>
-                    </form>
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
                 </div>
 
-
-
-
+                <a href="" style="text-decoration: none;">
+                    <div class="card-content">
+                        <p class="name">fijar</p>
+                        <p class="location">padang</p>
+                    </div>
+                </a>
             </div>
-        @endforeach
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-options" onclick="toggleContextMenu(this)">&#x22EE;</span>
+                </div>
+
+                <a href="" style="text-decoration: none;">
+                    <div class="card-content">
+                        <p class="name">fijar</p>
+                        <p class="location">padang</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="assets/img/1.jpeg" alt="">
+                </div>
+
+                <a href="" style="text-decoration: none;">
+                    <div class="card-content">
+                        <p class="name">fijar</p>
+                        <p class="location">padang</p>
+                    </div>
+                </a>
+            </div>
+
     </div>
-@endforeach
+
 
 <br>
 {{ $halaman->links() }}

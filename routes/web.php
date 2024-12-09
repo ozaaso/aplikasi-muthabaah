@@ -30,6 +30,11 @@ Route::get('/harian', function () {
     return view('jurnal/harian');
 });
 
+
+Route::get('/home3', function () {
+    return view('jurnal/home3');
+});
+
 // Route::resource('jurnal', JurnalsController::class); rute semua jurnal
 Route::get('/konten', [JurnalsController::class, 'index'])->name('jurnal.index'); // Menampilkan daftar jurna//l
 Route::get('/list', [JurnalsController::class, 'list'])->name('jurnal.list'); // Menampilkan daftar jurna//l

@@ -8,7 +8,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: white;
+    background-color: #f1f1f1;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-around;
@@ -27,7 +27,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: white;
+    background-color: #f1f1f1;
     /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); */
     display: flex;
     justify-content: space-around;
@@ -39,7 +39,7 @@
 }
 
 .tab {
-    width: 100px;
+    /* width: 100px; */
     text-align: center;
     cursor: pointer;
     flex: 1;
@@ -47,15 +47,52 @@
 }
 
 .tab span {
-    width: 100px;
+    /* width: 100px; */
     /* display: block; */
-    font-size: 18px; /* Bigger font */
-    color: #333;
+    font-size: 15px; /* Bigger font */
+    color: #898989;
+    transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* Active Tab */
 .tab.active span {
-    width: 100px;
-    color: #FFC488;
+    /* width: 100px; */
+    color: #2e8adb;
     font-weight: bold;
+    font-size: 18px;
+    /* font-weight: bold; Menambah ketebalan font saat dihover */
+
+    transition: color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease; /* Tra
+
+    /* box-shadow: 0 -3px 7px rgba(0, 0, 0, 0.1); */
+    /* border-bottom: 2px solid #ff0000; */
+    /* border-color: aqua; */
+    /* background-color: #858685; */
 }
+
+.tab.active .tab-icon {
+    fill: #2e8adb; /* Ganti dengan warna yang diinginkan saat aktif */
+}
+
+
+
+/* Mengubah warna isi dari SVG */
+.tab-icon {
+    fill: #7d7d7d; /* Ganti dengan warna yang diinginkan */
+}
+
+/* Mengubah warna ketika elemen tab dihover */
+.tab:hover .tab-icon {
+    fill: #228dff; /* Ganti dengan warna hover */
+}
+
+
+/* Mengubah warna dan gaya teks saat tab dihover */
+.tab:hover span {
+    color: #228dff; /* Ganti dengan warna yang diinginkan saat hover */
+    font-weight: bold; /* Menambah ketebalan font saat dihover */
+    font-size: 20px; /* Menambah ukuran font saat dihover */
+    transition: color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease;
+    font-weight: bolder;/* Transisi untuk efek yang lebih halus */
+}
+
