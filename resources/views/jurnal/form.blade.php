@@ -71,6 +71,8 @@
         <label><input type="checkbox" name="mulk" value="1"> tambah ilmu / kajian</label>
         <label><input type="checkbox" name="halangan" value="1"> Berhalangan</label>
         <label><input type="checkbox" name="doakan" value="1"> Mendoakan orang lain</label>
+        <label><input type="checkbox" name="tarawih" value="1"> Tarawih</label>
+        <label><input type="checkbox" name="witir" value="1"> Witir</label>
     </div>
 </div>
 

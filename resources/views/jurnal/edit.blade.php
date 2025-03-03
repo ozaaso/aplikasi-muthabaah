@@ -72,6 +72,10 @@
         <label><input type="checkbox" name="mulk" value="1" {{ $aktivitas->mulk == 1 ? 'checked' : '' }}> tambah ilmu / kajian</label>
         <label><input type="checkbox" name="halangan" value="1" {{ $aktivitas->halangan == 1 ? 'checked' : '' }}> Berhalangan</label>
         <label><input type="checkbox" name="doakan" value="1" {{ $aktivitas->doakan == 1 ? 'checked' : '' }}> Mendoakan orang lain</label>
+
+        <label><input type="checkbox" name="tarawih" value="1" {{ $aktivitas->tarawih == 1 ? 'checked' : '' }}> Tarawih</label>
+        <label><input type="checkbox" name="witir" value="1" {{ $aktivitas->witir == 1 ? 'checked' : '' }}> Witir</label>
+
     </div>
 </div>
 
