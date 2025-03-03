@@ -36,6 +36,8 @@ return new class extends Migration
             $table->boolean('doakan')->default(false);
             $table->boolean('bamagrib')->default(false);
             $table->boolean('baisya')->default(false);
+            $table->boolean('tarawih')->default(false);
+            $table->boolean('witir')->default(false);
         });
     }
 
